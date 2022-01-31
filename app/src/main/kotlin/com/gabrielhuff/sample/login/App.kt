@@ -1,7 +1,7 @@
 package com.gabrielhuff.sample.login
 
 import android.app.Application
-import android.support.annotation.VisibleForTesting
+import androidx.annotation.VisibleForTesting
 import com.gabrielhuff.sample.login.client.Client
 import com.gabrielhuff.sample.login.dao.LocalTokenDAO
 import com.gabrielhuff.sample.login.dao.UserDataDAO

@@ -1,6 +1,6 @@
 package com.gabrielhuff.sample.login.client
 
-import android.support.annotation.MainThread
+import androidx.annotation.MainThread
 import com.gabrielhuff.sample.login.client.base.*
 import com.gabrielhuff.sample.login.dao.LocalTokenDAO
 import com.gabrielhuff.sample.login.dao.UserDataDAO

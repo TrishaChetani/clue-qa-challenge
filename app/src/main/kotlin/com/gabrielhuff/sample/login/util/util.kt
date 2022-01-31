@@ -11,7 +11,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.inputmethod.InputMethodManager
 import android.widget.ProgressBar
 import com.gabrielhuff.sample.login.fragment.SimpleDialog

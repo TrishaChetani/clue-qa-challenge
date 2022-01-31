@@ -1,7 +1,7 @@
 package com.gabrielhuff.sample.login.activity.base
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.gabrielhuff.sample.login.App
 import com.gabrielhuff.sample.login.client.Client
 import io.reactivex.Observable

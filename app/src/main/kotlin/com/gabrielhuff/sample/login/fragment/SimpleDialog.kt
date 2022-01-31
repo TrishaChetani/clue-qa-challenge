@@ -5,8 +5,8 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.support.v4.app.DialogFragment
-import android.support.v7.app.AlertDialog
+import androidx.fragment.app.DialogFragment
+import androidx.appcompat.app.AlertDialog
 import com.gabrielhuff.sample.login.R
 import com.jakewharton.rxbinding2.view.clicks
 import kotlinx.android.synthetic.main.dialog.view.*
@@ -20,18 +20,18 @@ class SimpleDialog : DialogFragment() {
     @SuppressLint("InflateParams")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         // Inflate layout
-        val view = activity.layoutInflater.inflate(R.layout.dialog, null)
+        val view = activity!!.layoutInflater.inflate(R.layout.dialog, null)
 
         // Setup view contents
-        view.title.text = arguments.getString(ARG_TITLE)
-        view.description.text = arguments.getString(ARG_DESCRIPTION)
-        view.button.text = arguments.getString(ARG_BUTTON)
+        view!!.title.text = arguments!!.getString(ARG_TITLE)
+        view!!.description.text = arguments!!.getString(ARG_DESCRIPTION)
+        view!!.button.text = arguments!!.getString(ARG_BUTTON)
 
         // Dismiss when button is clicked
-        view.close.clicks().mergeWith(view.button.clicks()).subscribe { dismiss() }
+        view!!.close.clicks().mergeWith(view.button.clicks()).subscribe { dismiss() }
 
         // Create dialog
-        val dialog = AlertDialog.Builder(context).setView(view).create()
+        val dialog = AlertDialog.Builder(context!!).setView(view).create()
 
         // Make view background transparent (so the edges become effectively rounded)
         dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
